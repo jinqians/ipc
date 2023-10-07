@@ -8,7 +8,7 @@ if ping -c 5 -W 2 -i 0.2 www.itdog.cn | grep "100% packet loss" > /dev/null
 then
     echo "当前IP已经被封锁，正在尝试换IP..."
     # 向Telegram Bot发送消息
-    curl -s "https://api.telegram.org/bot"此处填入BOT HTTP API，并删掉两边引号"/sendMessage" \
+    curl -s "https://api.telegram.org/bot(此处填入BOT HTTP API，并删掉括号)/sendMessage" \
         -d "chat_id=你的chat ID" \
         -d "text=当前IP已经被封锁，正在尝试换IP..."
     
